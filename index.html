@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বাদুড়িয়া উচ্চ বিদ্যালয়</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accept Overlay -->
+  <div id="acceptOverlay">
+    <h1>এই ওয়েবসাইটে প্রবেশ করতে Accept করুন</h1>
+    <button onclick="acceptSite()">Accept All</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><img src="https://i.postimg.cc/Jzg5h8FC/file-000000003fbc61f7b9606fecf3735008.png" alt="School Logo"> বাদুড়িয়া উচ্চ বিদ্যালয়</div>
+    <ul>
+      <li onclick="scrollToSection('hero')">Home</li>
+      <li onclick="scrollToSection('about')">প্রতিষ্ঠান পরিচিতি</li>
+      <li onclick="scrollToSection('routine')">রুটিন</li>
+      <li onclick="scrollToSection('committee')">কমিটি</li>
+      <li onclick="scrollToSection('teachers')">শিক্ষক-কর্মচারী</li>
+      <li onclick="scrollToSection('gallery')">Gallery</li>
+    </ul>
+    <button onclick="toggleDarkMode()">🌓</button>
+  </nav>
+
+  <!-- Digital Clock -->
+  <div class="clock" id="clock"></div>
+
+  <!-- Hero Slider -->
+  <section class="hero" id="hero">
+    <div class="slides">
+      <img src="https://i.postimg.cc/zGwfPF1b/IMG-20250805-172836.jpg" alt="">
+      <img src="https://i.postimg.cc/j2Gx5mCV/IMG-20250805-172939.jpg" alt="">
+      <img src="https://i.postimg.cc/5t1tLhgb/IMG-20250805-172250.jpg" alt="">
+    </div>
+    <div class="hero-overlay">
+      <h1>স্বাগতম বাদুড়িয়া উচ্চ বিদ্যালয়ে</h1>
+      <p>শিক্ষাই জাতির মেরুদণ্ড – ১৯৬৬ সাল থেকে শিক্ষার আলো ছড়াচ্ছি</p>
+      <button class="glow-btn" onclick="scrollToSection('about')">আরো জানুন</button>
+    </div>
+  </section>
+
+  <!-- Notice -->
+  <section class="notice">
+    <marquee behavior="scroll" direction="left">📢 আগামী সপ্তাহে বার্ষিক ক্রীড়া প্রতিযোগিতা অনুষ্ঠিত হবে।</marquee>
+  </section>
+
+ <section id="institution">
+  <h2 class="glow-heading">বাদুড়িয়া উচ্চ বিদ্যালয় পরিচিতি</h2>
+  <div class="institution-card">
+    <p>
+      বাদুড়িয়া উচ্চ বিদ্যালয় ১৯৬৬ সালে প্রতিষ্ঠিত। আমরা সর্বদা শিক্ষার মানোন্নয়নে নিবেদিত। 
+      বিদ্যালয়টি ছেলে ও মেয়েদের জন্য উভয় ক্ষেত্রেই সমান সুযোগ প্রদান করে। 
+      আধুনিক শিক্ষণ পদ্ধতি ও প্রযুক্তি ব্যবহার করে শিক্ষার্থীদের প্রস্তুতি দেওয়া হয়। 
+      বার্ষিক ক্রীড়া, সাংস্কৃতিক ও বিজ্ঞান মেলা আয়োজনের মাধ্যমে শিক্ষার্থীদের সার্বিক বিকাশ নিশ্চিত করা হয়। 
+      বিদ্যালয়টি সরকারী অনুমোদিত এবং সকল শিক্ষাগত কার্যক্রম মন্ত্রণালয় কর্তৃক স্বীকৃত।
+    </p>
+  </div>
+</section>
+  
+  <section id="permission">
+  <h2 class="glow-heading">প্রতিষ্ঠানের পাঠদানের অনুমতি ও স্বীকৃতি</h2>
+  <div class="permission-card">
+    <p>বাদুড়িয়া উচ্চ বিদ্যালয় সরকার অনুমোদিত প্রতিষ্ঠান। 
+       শিক্ষাদান কার্যক্রমটি শিক্ষা মন্ত্রণালয়ের নির্দেশনা অনুযায়ী সম্পন্ন হয়। 
+       বিদ্যালয়টি সকল শ্রেণি ও শাখার শিক্ষার্থীদের জন্য মানসম্মত পাঠদান নিশ্চিত করে। 
+       সকল পরীক্ষার অনুমোদন এবং শিক্ষাগত কার্যক্রম সম্পাদনের জন্য সরকারী স্বীকৃতি রয়েছে।</p>
+  </div>
+</section>
+  
+  
+  <section id="student-info">
+  <h2 class="glow-heading">শ্রেণি ও লিঙ্গভিত্তিক শিক্ষার্থীর তথ্য</h2>
+  <div class="student-cards">
+    <div class="student-card">
+      <h3>ক্লাস ৬</h3>
+      <p>ছেলে: 35</p>
+      <p>মেয়ে: 32</p>
+    </div>
+    <div class="student-card">
+      <h3>ক্লাস ৭</h3>
+      <p>ছেলে: 30</p>
+      <p>মেয়ে: 28</p>
+    </div>
+    <div class="student-card">
+      <h3>ক্লাস ৮</h3>
+      <p>ছেলে: 28</p>
+      <p>মেয়ে: 30</p>
+    </div>
+    <div class="student-card">
+      <h3>ক্লাস ৯</h3>
+      <p>ছেলে: 25</p>
+      <p>মেয়ে: 27</p>
+    </div>
+    <div class="student-card">
+      <h3>ক্লাস ১০</h3>
+      <p>ছেলে: 22</p>
+      <p>মেয়ে: 24</p>
+    </div>
+  </div>
+</section>
+
+  
+  <section id="branches">
+  <h2 class="glow-heading">শ্রেণিভিত্তিক অনুমোদিত শাখার তথ্য</h2>
+  <div class="branch-cards">
+    <div class="branch-card">
+      <h3>ক্লাস ৬-৭</h3>
+      <p>গণিত, বিজ্ঞান, বাংলা, ইংরেজি</p>
+    </div>
+    <div class="branch-card">
+      <h3>ক্লাস ৮</h3>
+      <p>গণিত, বিজ্ঞান, বাংলা, ইংরেজি, ইসলাম শিক্ষা</p>
+    </div>
+    <div class="branch-card">
+      <h3>ক্লাস ৯</h3>
+      <p>গণিত, পদার্থবিজ্ঞান, রসায়ন, বাংলা, ইংরেজি</p>
+    </div>
+    <div class="branch-card">
+      <h3>ক্লাস ১০</h3>
+      <p>গণিত, পদার্থবিজ্ঞান, রসায়ন, জীববিজ্ঞান, বাংলা, ইংরেজি</p>
+    </div>
+  </div>
+</section>
+  
+  
+  <section id="mpo">
+  <h2 class="glow-heading">MPO বিস্তারিত তথ্য</h2>
+  <div class="mpo-cards">
+    <div class="mpo-card">
+      <h3>মোট শিক্ষক সংখ্যা</h3>
+      <p>১৩ জন</p>
+    </div>
+    <div class="mpo-card">
+      <h3>MPO প্রাপ্ত শিক্ষক</h3>
+      <p>১১ জন</p>
+    </div>
+    <div class="mpo-card">
+      <h3>MPO বাকি শিক্ষক</h3>
+      <p>২ জন</p>
+    </div>
+    <div class="mpo-card">
+      <h3>MPO পেমেন্ট অবস্থা</h3>
+      <p>নিয়মিত</p>
+    </div>
+  </div>
+</section>
+  
+  
+  <section id="teaching-info">
+  <h2 class="glow-heading">পাঠদান সংক্রান্ত তথ্য</h2>
+  <div class="teaching-cards">
+    <div class="teaching-card">
+      <h3>শ্রেণি ৬-৭</h3>
+      <p>প্রতিদিন ৭ টি ক্লাস, বাংলা, গণিত, বিজ্ঞান, ইংরেজি, ইসলাম শিক্ষা।</p>
+    </div>
+    <div class="teaching-card">
+      <h3>শ্রেণি ৮</h3>
+      <p>প্রতিদিন ৭ টি ক্লাস, বাংলা, গণিত, বিজ্ঞান, ইংরেজি, ইসলাম শিক্ষা।</p>
+    </div>
+    <div class="teaching-card">
+      <h3>শ্রেণি ৯</h3>
+      <p>প্রতিদিন ৭ টি ক্লাস, পদার্থবিজ্ঞান, রসায়ন, গণিত, বাংলা, ইংরেজি।</p>
+    </div>
+    <div class="teaching-card">
+      <h3>শ্রেণি ১০</h3>
+      <p>প্রতিদিন ৭ টি ক্লাস, পদার্থবিজ্ঞান, রসায়ন, জীববিজ্ঞান, বাংলা, ইংরেজি।</p>
+    </div>
+  </div>
+</section>
+  
+  
+  
+  
+  
+  <!-- Routine Section -->
+  <section id="routine">
+    <h2>সাপ্তাহিক রুটিন</h2>
+    <div class="routine-table">
+      <table>
+        <thead>
+          <tr>
+            <th>দিন</th>
+            <th>১ম</th><th>২য়</th><th>৩য়</th><th>৪র্থ</th>
+            <th>৫ম</th><th>৬ষ্ঠ</th><th>৭ম</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>রবিবার</td><td>Math</td><td>Bangla</td><td>Science</td><td>English</td><td>Islam</td><td>History</td><td>Art</td>
+          </tr>
+          <tr>
+            <td>সোমবার</td><td>Bangla</td><td>Math</td><td>English</td><td>Science</td><td>Islam</td><td>Geography</td><td>PE</td>
+          </tr>
+          <tr>
+            <td>মঙ্গলবার</td><td>Science</td><td>Bangla</td><td>Math</td><td>English</td><td>Art</td><td>History</td><td>Islam</td>
+          </tr>
+          <tr>
+            <td>বুধবার</td><td>English</td><td>Math</td><td>Bangla</td><td>Science</td><td>PE</td><td>Geography</td><td>Islam</td>
+          </tr>
+          <tr>
+            <td>বৃহস্পতিবার</td><td>Math</td><td>Bangla</td><td>Science</td><td>English</td><td>Islam</td><td>History</td><td>Art</td>
+          </tr>
+          <tr>
+            <td>শুক্রবার</td><td colspan="7" class="holiday">ছুটি</td>
+          </tr>
+          <tr>
+            <td>শনিবার</td><td colspan="7" class="holiday">ছুটি</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Committee Section -->
+  <section id="committee">
+    <h2>ব্যবস্থাপনা কমিটি</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://i.postimg.cc/zfjNYqp8/IMG-20250814-WA0001.jpg" alt="President">
+        <h3>জনাব মোঃ জিল্লুর রহমান বিপ্লব </h3>
+        <p>সভাপতি</p>
+        <p>“শিক্ষাই জাতির মেরুদণ্ড। আমরা সবাই মিলে এগিয়ে যাচ্ছি।”</p>
+      </div>
+      <div class="card">
+        <img src="member1.png" alt="">
+        <h3>সাদিকুর রহমান</h3>
+        <p>সদস্য</p>
+      </div>
+      <div class="card">
+        <img src="member2.png" alt="">
+        <h3>লতিফা বেগম</h3>
+        <p>সদস্য</p>
+      </div>
+      <div class="card">
+        <img src="member3.png" alt="">
+        <h3>রহিম উদ্দিন</h3>
+        <p>সদস্য</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers & Staff Section -->
+  <section id="teachers">
+    <h2>শিক্ষক-কর্মচারী</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="principal.png" alt="Principal">
+        <h3>মোঃ বারর আলী</h3>
+        <p>প্রধান শিক্ষক</p>
+        <p>Phone: 0123456789</p>
+        <p>Email: principal@school.edu.bd</p>
+      </div>
+
+    <div class="card-container">
+      <div class="card">
+        <img src="principal.png" alt="Principal">
+        <h3>সুকুমার সরকার </h3>
+        <p>Phone: 0123456789</p>
+        <p>Email: principal@school.edu.bd</p>
+      </div>
+      
+      <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+        
+        <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+          
+          <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+            
+            <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+              
+              
+      <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+        
+        <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+          
+          <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+            
+            <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+              
+              
+        <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+          
+          <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+            
+            <div class="card-container">
+
+<div class="card">
+
+<img src="principal.png" alt="Principal">
+
+<h3>মোঃ বাবর আলী</h3>
+
+<p>Phone: 0123456789</p>
+
+<p>Email: principal@school.edu.bd</p>
+
+</div>
+        
+      <!-- 12 Teachers + 6 Staff, একইভাবে card তৈরি করুন -->
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>গ্যালারি</h2>
+    <div class="card-container gallery-container">
+      <div class="card"><img src="https://i.postimg.cc/50WPN0Nf/IMG-20250805-173001.jpg" alt=""></div>
+      <div class="card"><img src="https://i.postimg.cc/5t1tLhgb/IMG-20250805-172250.jpg" alt=""></div>
+      <div class="card"><img src="https://i.postimg.cc/j2Gx5mCV/IMG-20250805-172939.jpg" alt=""></div>
+    </div>
+  </section>
+  
+  <footer>
+  <div class="footer-wrapper">
+    <div class="footer-brand">
+      <h2>Baduria high school </h2>
+    </div>
+   
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 All rights reserved. Designed by Hridoy</p>
+</footer>
+
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Footer-->
+
+  <script src="script.js"></script>
+</body>
+</html>
